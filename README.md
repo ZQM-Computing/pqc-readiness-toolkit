@@ -24,3 +24,10 @@ License: Apache-2.0 (tooling); commercial deliverables sold separately.
 
 ## Commercial contact
 zqmcomputing@gmail.com
+
+## Native Windows build
+Build OpenQuantumSafe/liboqs on Windows via MSVC/CMake:
+```powershell
+powershell -NoProfile -ExecutionPolicy Bypass -File scripts/build_liboqs_windows.ps1
+```
+See `docs/liboqs-windows-build.md`.

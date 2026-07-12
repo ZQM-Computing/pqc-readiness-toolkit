@@ -14,6 +14,3 @@ DO NOT add hearsay or uncited claims. Each entry needs a verifiable public URL.
 
 ## liboqs
 - https://github.com/open-quantum-safe/liboqs
-
-## Placeholder for future buyer
-- Add only after signed attestation or public case study.

@@ -16,8 +16,6 @@ Baseline methodology: 11 standards mapped in `templates/standards_matrix.md`
 | Pilot | PQC-PILOT | Assessment + 1 staged profile (TLS or code-sign) | $800/endpoint |
 | Subscription | PQC-RETAINER | Quarterly reassessment + roadmap updates | $500-$2000/mo |
 
-## Plugin Path for Hermes intake
-- Plugin dir: `c:\Users\zqmco\.hermes\work\pqc-readiness\`
-- Skill: `zqm-pqc-readiness`
+## Release roots
 - Deliverable root: `dist/`
-- Local payment flow: `PAYMENT_INSTRUCTIONS.md` + GitHub `purchase` label → fulfillment
+- Payment flow: `PAYMENT_INSTRUCTIONS.md` + GitHub `purchase` label → fulfillment

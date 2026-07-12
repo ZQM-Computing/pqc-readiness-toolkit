@@ -1,0 +1,28 @@
+name: sales-front-sync
+
+on:
+  push:
+    branches: [ main ]
+    paths:
+      - README-offer.md
+      - sku-bundle.md
+  workflow_dispatch:
+
+permissions:
+  contents: read
+
+jobs:
+  sync:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.11'
+      - name: Build PQC sync manifest
+        run: python scripts/sales_front_sync.py
+      - name: Upload sync manifest
+        uses: actions/upload-artifact@v4
+        with:
+          name: sales-front-sync
+          path: .github/sales-front-sync.json

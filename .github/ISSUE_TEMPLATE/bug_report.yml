@@ -1,0 +1,11 @@
+name: General Issue
+description: Report a bug or request a feature.
+title: "[ISSUE] "
+labels: [question]
+body:
+  - type: textarea
+    id: description
+    attributes:
+      label: Description
+    validations:
+      required: true

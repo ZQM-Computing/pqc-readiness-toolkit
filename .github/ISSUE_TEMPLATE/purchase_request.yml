@@ -7,7 +7,7 @@ body:
     attributes:
       value: |
         No KYC, no account required.
-        Read payment instructions first: [PAYMENT_INSTRUCTIONS.md](https://github.com/ZQM-Computing/pqc-readiness-toolkit/blob/main/PAYMENT_INSTRUCTIONS.md)
+        Read payment instructions first: [PAYMENT_INSTRUCTIONS.md](https://github.com/ZQM-Labs/pqc-readiness-toolkit/blob/main/PAYMENT_INSTRUCTIONS.md)
   - type: input
     id: sku
     attributes:

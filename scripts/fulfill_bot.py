@@ -5,7 +5,7 @@ from email.message import EmailMessage
 
 issue_body = os.environ.get('ISSUE_BODY', '')
 issue_url = os.environ.get('ISSUE_URL', '')
-release_url = os.environ.get('RELEASE_URL', 'https://github.com/ZQM-Computing/pqc-readiness-toolkit/releases/latest/download/zqm_pqc_readiness_package.zip')
+release_url = os.environ.get('RELEASE_URL', 'https://github.com/ZQM-Labs/pqc-readiness-toolkit/releases/latest/download/zqm_pqc_readiness_package.zip')
 expected_hash = os.environ.get('EXPECTED_HASH', '')
 
 smtp_host = os.environ.get('SMTP_HOST', 'smtp.gmail.com')

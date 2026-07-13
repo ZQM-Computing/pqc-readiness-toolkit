@@ -1,0 +1,22 @@
+name: Subscription Request
+description: Request a retainer or subscription tier.
+title: "[SUBSCRIPTION] "
+labels: [subscription]
+body:
+  - type: input
+    id: tier
+    attributes:
+      label: Retainer tier
+      description: e.g. ZQM-RETAINER-*
+    validations:
+      required: true
+  - type: input
+    id: contact
+    attributes:
+      label: Contact email
+    validations:
+      required: true
+  - type: textarea
+    id: notes
+    attributes:
+      label: Notes

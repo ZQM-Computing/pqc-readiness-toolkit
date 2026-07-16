@@ -24,4 +24,4 @@ Controls map to templates/standards_matrix.md
 - Stage 3: SPHINCS+ root trust anchor migration
 
 ---
-Client name: ______________________  Date: ____________  ZQM attestation engineer: ______________________
+Client name: ______________________ Date: ____________ ZQM attestation engineer: ______________________

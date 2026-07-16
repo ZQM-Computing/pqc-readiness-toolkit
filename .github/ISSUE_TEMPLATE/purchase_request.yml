@@ -3,44 +3,44 @@ description: Submit a purchase request for a ZQM PQC Readiness Toolkit license.
 title: "purchase: PQC-<SKU> - <email>"
 labels: ["purchase"]
 body:
-  - type: markdown
-    attributes:
-      value: |
-        No KYC, no account required.
-        Read payment instructions first: [PAYMENT_INSTRUCTIONS.md](https://github.com/ZQM-Labs/pqc-readiness-toolkit/blob/main/PAYMENT_INSTRUCTIONS.md)
-  - type: input
-    id: sku
-    attributes:
-      label: SKU
-      description: PQC-ASSESS, PQC-PILOT, or PQC-RETAINER
-      placeholder: PQC-ASSESS
-    validations:
-      required: true
-  - type: input
-    id: email
-    attributes:
-      label: Buyer email
-      description: Email used for the license ID and fulfillment delivery
-      placeholder: you@example.com
-    validations:
-      required: true
-  - type: input
-    id: txid
-    attributes:
-      label: Transaction ID
-      description: Crypto txid / payment reference for this purchase. Required for fulfillment.
-      placeholder: blockchain txid
-    validations:
-      required: true
-  - type: input
-    id: addons
-    attributes:
-      label: Add-ons
-      description: "Optional add-on SKUs: ZQM-PQC-ADD-REMEDIATION, ZQM-PQC-ADD-VENDOR. Comma-separate if multiple."
-      placeholder: "ZQM-PQC-ADD-REMEDIATION, ZQM-PQC-ADD-VENDOR"
-    validations:
-      required: false
-  - type: markdown
-    attributes:
-      value: |
-        Payment methods: see PAYMENT_INSTRUCTIONS.md
+ - type: markdown
+ attributes:
+ value: |
+ No KYC, no account required.
+ Read payment instructions first: [PAYMENT_INSTRUCTIONS.md](https://github.com/ZQM Computing/pqc-readiness-toolkit/blob/main/PAYMENT_INSTRUCTIONS.md)
+ - type: input
+ id: sku
+ attributes:
+ label: SKU
+ description: PQC-ASSESS, PQC-PILOT, or PQC-RETAINER
+ placeholder: PQC-ASSESS
+ validations:
+ required: true
+ - type: input
+ id: email
+ attributes:
+ label: Buyer email
+ description: Email used for the license ID and fulfillment delivery
+ placeholder: you@example.com
+ validations:
+ required: true
+ - type: input
+ id: txid
+ attributes:
+ label: Transaction ID
+ description: Crypto txid / payment reference for this purchase. Required for fulfillment.
+ placeholder: blockchain txid
+ validations:
+ required: true
+ - type: input
+ id: addons
+ attributes:
+ label: Add-ons
+ description: "Optional add-on SKUs: ZQM-PQC-ADD-REMEDIATION, ZQM-PQC-ADD-VENDOR. Comma-separate if multiple."
+ placeholder: "ZQM-PQC-ADD-REMEDIATION, ZQM-PQC-ADD-VENDOR"
+ validations:
+ required: false
+ - type: markdown
+ attributes:
+ value: |
+ Payment methods: see PAYMENT_INSTRUCTIONS.md

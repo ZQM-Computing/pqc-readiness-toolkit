@@ -1,6 +1,3 @@
-# SECURITY
-
-## Note
-This file was added to close public-surface documentation gaps.
-
-Contact: zqmcomputing@gmail.com
+# Security policy for ZQM PQC Readiness Toolkit
+## Reporting a vulnerability
+Email zqmcomputing@gmail.com with reproducer, impact, and host/version details.

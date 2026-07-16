@@ -6,3 +6,7 @@ dist/pqc_readiness_release_package_*.zip.sha256
 evidence/*.json
 tests/verify_pqc_final.py
 *.tmp
+dist/
+vendor/
+*.lib
+*.dll

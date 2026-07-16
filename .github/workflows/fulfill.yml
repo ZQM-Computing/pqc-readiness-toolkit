@@ -1,39 +1,39 @@
 name: PQC Fulfillment
 
 on:
-  issues:
-    types: [labeled]
-  workflow_dispatch:
+ issues:
+ types: [labeled]
+ workflow_dispatch:
 
 permissions:
-  issues: write
-  contents: read
+ issues: write
+ contents: read
 
 jobs:
-  fulfill:
-    if: github.event_name == 'workflow_dispatch' || (github.event_name == 'issues' && github.event.label.name == 'purchase')
-    runs-on: ubuntu-latest
-    env:
-      ISSUE_BODY: ${{ github.event.issue.body }}
-      ISSUE_URL: ${{ github.event.issue.html_url }}
-      REPO: ${{ github.repository }}
-      RELEASE_URL: https://github.com/ZQM-Labs/pqc-readiness-toolkit/releases/latest/download/zqm_pqc_readiness_package.zip
-      SMTP_HOST: smtp.gmail.com
-      SMTP_PORT: 587
-      SMTP_USER: ${{ secrets.GMAIL_USER }}
-      SMTP_PASS: ${{ secrets.GMAIL_APP_PASSWORD }}
-      EMAIL_FROM: ${{ secrets.GMAIL_USER }}
-    steps:
-      - uses: actions/checkout@v7
-      - uses: actions/setup-python@v5
-        with:
-          python-version: '3.11'
-      - name: Generate license and email buyer
-        run: python scripts/fulfill_bot.py
-      - name: Comment on issue
-        uses: peter-evans/create-or-update-comment@v5
-        with:
-          token: ${{ secrets.GITHUB_TOKEN }}
-          issue-number: ${{ github.event.issue.number }}
-          body: |
-            Fulfillment queued. If you don't receive the download link within a few minutes, open a new issue labeled `support` with the same `txid`.
+ fulfill:
+ if: github.event_name == 'workflow_dispatch' || (github.event_name == 'issues' && github.event.label.name == 'purchase')
+ runs-on: ubuntu-latest
+ env:
+ ISSUE_BODY: ${{ github.event.issue.body }}
+ ISSUE_URL: ${{ github.event.issue.html_url }}
+ REPO: ${{ github.repository }}
+ RELEASE_URL: https://github.com/ZQM Computing/pqc-readiness-toolkit/releases/latest/download/zqm_pqc_readiness_package.zip
+ SMTP_HOST: smtp.gmail.com
+ SMTP_PORT: 587
+ SMTP_USER: ${{ secrets.GMAIL_USER }}
+ SMTP_PASS: ${{ secrets.GMAIL_APP_PASSWORD }}
+ EMAIL_FROM: ${{ secrets.GMAIL_USER }}
+ steps:
+ - uses: actions/checkout@v4
+ - uses: actions/setup-python@v5
+ with:
+ python-version: '3.11'
+ - name: Generate license and email buyer
+ run: python scripts/fulfill_bot.py
+ - name: Comment on issue
+ uses: peter-evans/create-or-update-comment@v4
+ with:
+ token: ${{ secrets.GITHUB_TOKEN }}
+ issue-number: ${{ github.event.issue.number }}
+ body: |
+ Fulfillment queued. If you don't receive the download link within a few minutes, open a new issue labeled `support` with the same `txid`.

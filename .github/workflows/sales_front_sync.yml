@@ -22,7 +22,7 @@ jobs:
       - name: Build PQC sync manifest
         run: python scripts/sales_front_sync.py
       - name: Upload sync manifest
-        uses: actions/upload-artifact@v4
+        uses: actions/upload-artifact@v7
         with:
           name: sales-front-sync
           path: .github/sales-front-sync.json

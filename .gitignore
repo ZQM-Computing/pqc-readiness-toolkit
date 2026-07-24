@@ -10,3 +10,4 @@ dist/
 vendor/
 *.lib
 *.dll
+/PAYMENT_INSTRUCTIONS.md

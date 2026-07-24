@@ -1,0 +1,12 @@
+title = "ZQM gitleaks configuration"
+
+[extend]
+useDefault = true
+
+[allowlist]
+paths = [
+  '.*\.pytest_cache.*',
+  '.*/vendor/.*',
+  '.*/dist/.*\.json',
+  '.*release.*\.json',
+]
